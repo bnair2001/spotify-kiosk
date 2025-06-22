@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+:root {
+  --bg: #000;
+  --fg: #fff;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* canvases take the whole viewport */
+#bg,
+#eq {
+  position: fixed;
+  inset: 0;
+}
+
+#bg {
+  z-index: 0;
+}
+
+#eq {
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* info card */
+.card {
+  position: absolute;
+  left: 50%;
+  bottom: 12rem;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 2rem 3rem;
+  max-width: 100%;
+  /* margin: 5rem auto; */ /* Remove this line */
+  backdrop-filter: blur(20px) brightness(1.2);
+  border-radius: 2rem;
+  color: var(--fg);
+  text-shadow: 0 0 8px #000;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* fade helper classes */
+.fade-out { opacity: 0; transform: scale(0.95); }
+.fade-in  { opacity: 1; transform: scale(1); }
+
+.card img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.5);
+}
+
+.meta h1 {
+  margin: 0 0 0.2em;
+  font-size: 3rem;
+}
+
+.meta h2 {
+  margin: 0;
+  font-weight: 300;
+  opacity: 0.8;
+}

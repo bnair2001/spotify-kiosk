@@ -1,0 +1,14 @@
+{
+  "name": "spotify-kiosk",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16",
+    "express": "^4",
+    "node-fetch": "^3",
+    "colorthief": "^2"
+  }
+}
